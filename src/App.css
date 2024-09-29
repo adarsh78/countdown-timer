@@ -1,0 +1,56 @@
+.parent div {
+  position: absolute;
+  width: 16px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: hsl(234, 17%, 12%);
+}
+
+.parent {
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: hsl(236, 21%, 26%);
+}
+
+.top-card{
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.line {
+  border-radius: 1% !important;
+  width: 95px !important;
+  position: absolute;
+  top: 39px;
+  left: 6px;
+  background-color: hsl(236, 20%, 17%) !important;
+  z-index: 10;
+}
+
+.top {
+  top: -10px;
+}
+.bottom {
+  bottom: -10px;
+}
+.left {
+  left: -10px;
+}
+.right {
+  right: -10px;
+}
+
+.flip-seconds, .flip-minutes, .flip-hours, .flip-days {
+  transform-origin: top; 
+  transform: rotateX(0deg); 
+  transition: transform 0.6s ease-in-out; 
+}
+
+.flipped {
+  transform: rotateX(180deg);
+}
+
+@media screen and (min-width: 1000px) {
+  .line {
+    top: 54px;
+    width: 110px !important;
+  }
+}
