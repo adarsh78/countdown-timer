@@ -8,7 +8,6 @@ const App = () => {
     minutes: "00",
     seconds: "00",
   });
-  
 
   useEffect(() => {
     const countdownTimer = () => {
@@ -58,7 +57,7 @@ const App = () => {
 
       // Flip minutes when seconds hit 0
       if (timeLeft.seconds === "00") {
-        console.log("yes")
+        console.log("yes");
         minutesElement.classList.add("flipped");
         setTimeout(() => {
           minutesElement.classList.remove("flipped");
@@ -96,84 +95,104 @@ const App = () => {
           We're launching soon
         </h1>
         <div className="flex gap-5">
-          <div className="absolute top-[319px] lg:top-[259px] left-[42px] lg:left-[32.5rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
+          <div className="absolute top-[300px] lg:top-[237px] left-[25px] lg:left-[32.5rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
             {timeLeft.days}
           </div>
-          <div className="absolute top-[319px] lg:top-[259px] left-[128px] lg:left-[43.4rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
+          <div className="absolute top-[300px] lg:top-[237px] left-[115px] lg:left-[43.4rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
             {timeLeft.hours}
           </div>
-          <div className="absolute top-[319px] lg:top-[259px] left-[213px] lg:left-[54.3rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
+          <div className="absolute top-[300px] lg:top-[237px] left-[203px] lg:left-[54.3rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
             {timeLeft.minutes}
           </div>
-          <div className="absolute top-[319px] lg:top-[259px] left-[297px] lg:left-[65.2rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
+          <div className="absolute top-[300px] lg:top-[237px] left-[306px] lg:left-[65.2rem] z-10 text-[2rem] lg:text-[4rem] text-[hsl(345,95%,68%)]">
             {timeLeft.seconds}
           </div>
         </div>
 
         <div className="flex gap-7 lg:gap-9 w-[360px] lg:w-[500px] justify-center">
-          <div className="">
-          <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
-            <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
-              <div className="bottom left"></div>
-              <div className="line"></div>
-              <div className="bottom right"></div>
-            </div>
-            <div className="parent flip-days w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
-              <div className="top left"></div>
-              <div className="top right"></div>
-            </div>
-            </div>
-          </div>
-
-          <div>
-          <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
-            <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
-              <div className="bottom left"></div>
-              <div className="line"></div>
-              <div className="bottom right"></div>
-            </div>
-            <div className="parent flip-hours w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
-              <div className="top left"></div>
-              <div className="top right"></div>
-            </div>
-            </div>
-          </div>
-
-          <div>
-          <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
-            <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
-              <div className="bottom left"></div>
-              <div className="line"></div>
-              <div className="bottom right"></div>
-            </div>
-            <div className="parent flip-minutes w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
-              <div className="top left"></div>
-              <div className="top right"></div>
-            </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
-              <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
-                <div className="bottom left"></div>
-                <div className="line"></div>
-                <div className="bottom right"></div>
-              </div>
-              <div className="parent flip-seconds w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
-                <div className="top left"></div>
-                <div className="top right"></div>
+          <div className="flex flex-col items-center">
+            <div className="">
+              <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
+                <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
+                  <div className="bottom left"></div>
+                  <div className="line"></div>
+                  <div className="bottom right"></div>
+                </div>
+                <div className="parent flip-days w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
+                  <div className="top left"></div>
+                  <div className="top right"></div>
+                </div>
               </div>
             </div>
+            <span className="text-[hsl(237,18%,59%)] tracking-[0.2rem] text-[12px] uppercase mt-7">
+              days
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div>
+              <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
+                <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
+                  <div className="bottom left"></div>
+                  <div className="line"></div>
+                  <div className="bottom right"></div>
+                </div>
+                <div className="parent flip-hours w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
+                  <div className="top left"></div>
+                  <div className="top right"></div>
+                </div>
+              </div>
+            </div>
+            <span className="text-[hsl(237,18%,59%)] tracking-[0.2rem] text-[12px] uppercase mt-7">
+              hours
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div>
+              <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
+                <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
+                  <div className="bottom left"></div>
+                  <div className="line"></div>
+                  <div className="bottom right"></div>
+                </div>
+                <div className="parent flip-minutes w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
+                  <div className="top left"></div>
+                  <div className="top right"></div>
+                </div>
+              </div>
+            </div>
+            <span className="text-[hsl(237,18%,59%)] tracking-[0.2rem] text-[12px] uppercase mt-7">
+              minutes
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div>
+              <div className="w-[60px] top-card h-[60px] lg:w-[120px] lg:h-[110px] bg-[hsl(236,21%,26%)] rounded-md">
+                <div className="parent w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-t-md relative overflow-hidden">
+                  <div className="bottom left"></div>
+                  <div className="line"></div>
+                  <div className="bottom right"></div>
+                </div>
+                <div className="parent flip-seconds w-[60px] h-[30px] lg:w-[120px] lg:h-[55px] bg-[hsl(236,21%,26%)] rounded-b-md relative overflow-hidden">
+                  <div className="top left"></div>
+                  <div className="top right"></div>
+                </div>
+              </div>
+            </div>
+            <span className="text-[hsl(237,18%,59%)] tracking-[0.2rem] text-[12px] uppercase mt-7">
+              seconds
+            </span>
           </div>
         </div>
 
         <img
           src="./images/pattern-hills.svg"
           alt="pattern-hills"
-          className="h-[150px] top-[254px] lg:h-[200px] w-full relative lg:top-[220px]"
+          className="h-[150px] top-[233px] lg:h-[200px] w-full relative lg:top-[200px]"
         />
-        <div className="relative flex gap-8 top-[175px] lg:top-[100px]">
+        <div className="relative flex gap-8 top-[150px] lg:top-[80px]">
           <img src="./images/icon-facebook.svg" alt="icon-facebook" />
           <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
           <img src="./images/icon-instagram.svg" alt="icon-instagram" />
